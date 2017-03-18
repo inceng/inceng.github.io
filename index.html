@@ -150,7 +150,7 @@
   <div class="entry">
     
       <p>网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。</p>
-<p><em>本文的代码均来自<a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/，如果您在技术细节上有任何疑问，请以原文为准。">http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/，如果您在技术细节上有任何疑问，请以原文为准。</a></em></p>
+<p><em>本文的代码均来自<a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/">http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/</a> ，如果您在技术细节上有任何疑问，请以原文为准。</em></p>
 <p>网络存储分为两种：本地存储（localStorage）和会话存储（sessionStorage）。这两种存储模式的最大区别在于，本地存储是持久性的存储，该存储只有在用户清理浏览器存储或通过代码进行清理时，才会被删除；而会话存储的生命周期仅仅限定在会话期间，一旦用户关闭浏览器或相关标签，数据即刻清除。值得注意的是，会话存储的存储界限通常都只是标签页级别，同一个域的其它标签页网页，无法共享数据。</p>
 <h2 id="数据存取"><a href="#数据存取" class="headerlink" title="数据存取"></a>数据存取</h2><p>网络存储是一种键值对的存储方式，在数据的存取方面，两种网络存储没有任何差别。下面来看看数据的存储方法：</p>
 <ul>
