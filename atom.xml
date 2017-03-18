@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>寅信 - Inceng</title>
+  <subtitle>WEB前端攻程狮、致力于关注前沿WEB技术</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://inceng.github.io/"/>
+  <updated>2017-03-18T08:29:59.875Z</updated>
+  <id>http://inceng.github.io/</id>
+  
+  <author>
+    <name>Inceng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WEB分享资料下载</title>
+    <link href="http://inceng.github.io/2017/03/19/it-share/"/>
+    <id>http://inceng.github.io/2017/03/19/it-share/</id>
+    <published>2017-03-19T07:50:14.000Z</published>
+    <updated>2017-03-18T08:29:59.875Z</updated>
+    
+    <content type="html"><![CDATA[<p>NodeJS分享下载地址：<br>链接: <a href="https://pan.baidu.com/s/1kV0Wjjx" target="_blank" rel="external">https://pan.baidu.com/s/1kV0Wjjx</a> 密码: qshi</p>
+<p>HTML5、HTML5视频、移动端实战系列视频教程、AngularJS Videos等<br>链接: <a href="https://pan.baidu.com/s/1jHARqT4" target="_blank" rel="external">https://pan.baidu.com/s/1jHARqT4</a> 密码: 52d8</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;NodeJS分享下载地址：&lt;br&gt;链接: &lt;a href=&quot;https://pan.baidu.com/s/1kV0Wjjx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://pan.baidu.com/s/1kV0Wjjx&lt;/a&gt; 密码: q
+    
+    </summary>
+    
+    
+      <category term="Share" scheme="http://inceng.github.io/tags/Share/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5（目前）无法帮你实现的五件事</title>
+    <link href="http://inceng.github.io/2017/03/18/html-cannt/"/>
+    <id>http://inceng.github.io/2017/03/18/html-cannt/</id>
+    <published>2017-03-18T08:04:14.000Z</published>
+    <updated>2017-03-18T08:06:24.821Z</updated>
+    
+    <content type="html"><![CDATA[<p>一直以来，很多人都专注于HTML5能够实现什么（或者是如何将各种方法连接起来，实现一个更加优雅的解决方案）。而现在，也不少人想将目光投向那些HTML5无法实现的事情。MSDN上微软员工thebeebs的一篇博文回答了这个问题：</p>
+<a id="more"></a>##### 1:HTML5无法实现DRM<br><br>如果你有一家多媒体公司，你需要控制或者限制你的视频内容——通常是在多媒体内容中添加数字版权加密技术（DRM）。不幸的是，HTML5无法加入DRM。HTML5的问题是，它会将多媒体内容的格式完全暴露出来，要解决这个问题并不困难（相关的技术和策略可以在W3C bug system上看到）。我个人认为，这个问题确实有必要解决。抛开各界对DRM的争议，至少对许多公司而言，支持DRM还是非常有意义的——看看Lovefilm的blog ，你就知道目前各个多媒体公司面临的困难了。<br><br>##### 2:HTML5不能播放直播视频<br><br>HTML5已经能够很好地处理静态的视频文件了，但它现在还无法处理直播的视频。尽管HTML5能够提供优质的视频查询和视频点播服务，但是它却无法支持用户观看在线的足球比赛。Apple使用HTTP Live Streaming弥补了HTML5的这一缺失。它通过HTTP传输H.264的文件块，但是这一技术只能在Safari上运行。（顺便提一句，有些人以为HTML5不支持视频的随机播放，但其实HTML5是支持这一功能的。）Streaming Media杂志的网站上能够找到非常丰富的HTML5视频资源。<br><br>##### 3:HTML5上的音频处理也不完美<br><br>你也许会认为：既然HTML5都能够解决视频播放问题了，那音频播放自然不在话下咯。但音频处理最大的问题就是怎样处理延迟的问题。当你的应用程序或是游戏要求音频文件与屏幕上显示的操作保持同步时，这个问题就凸显出来了。其中一个问题就是不同的浏览器处理音频文件的方式可能也有所不同。如果想了解更多相关的信息，可以看看IE博客上的相关介绍，Grant Skinner的SoundJS JavaScript library提供了一种不错的解决方案。<br><br>##### 4:HTML5上不能与摄像头交互<br><br>与Flash有所不同，HTML5不支持用户与摄像头交互（或者是PC机上的麦克风），这使得基于web的会议很难实现。当然也不是完全没有办法，在HTML5Labs上，你可以找到一个Media Capture API的相关标准，它是W3C标准中有关音频处理的部分。HTML5Labs是由最早的Microsoft标准和一些web标准（如W3C）演化而来的。所以它目前还处在发展之中，一旦音频处理问题解决了，就开始着手解决视频问题了。你可以在HTML5Labs网站上找到许多相关的资料。<br><br>##### 5:HTML5上无法实现视频的全屏播放<br><br>使用插件全屏观看视频是没有问题的。但是，如果是使用HTML5，这可能还有点困难（至少是现在）。但针对这一问题，现在已经有一些相关的支持协议了。Chris Pearce在Thundering Herd博客中介绍了他是如何使用HTML全屏API在Firefox上实现视频的全屏播放的。这个API提供了“全屏”的HTML组件。Chrome上也有相关的解决方案。<br><br>以上就是HTML5目前无法实现的5件事，但是HTML5不久将解决上述这些问题。<br><!--more-->]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一直以来，很多人都专注于HTML5能够实现什么（或者是如何将各种方法连接起来，实现一个更加优雅的解决方案）。而现在，也不少人想将目光投向那些HTML5无法实现的事情。MSDN上微软员工thebeebs的一篇博文回答了这个问题：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://inceng.github.io/tags/HTML5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用HTML5轻松完成数据存储</title>
+    <link href="http://inceng.github.io/2017/03/18/html-storage/"/>
+    <id>http://inceng.github.io/2017/03/18/html-storage/</id>
+    <published>2017-03-18T07:18:14.000Z</published>
+    <updated>2017-03-18T09:07:01.329Z</updated>
+    
+    <content type="html"><![CDATA[<p>网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。</p>
+<p><em>本文的代码均来自<a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/" target="_blank" rel="external">http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/</a> ，如果您在技术细节上有任何疑问，请以原文为准。</em></p>
+<p>网络存储分为两种：本地存储（localStorage）和会话存储（sessionStorage）。这两种存储模式的最大区别在于，本地存储是持久性的存储，该存储只有在用户清理浏览器存储或通过代码进行清理时，才会被删除；而会话存储的生命周期仅仅限定在会话期间，一旦用户关闭浏览器或相关标签，数据即刻清除。值得注意的是，会话存储的存储界限通常都只是标签页级别，同一个域的其它标签页网页，无法共享数据。</p>
+<h2 id="数据存取"><a href="#数据存取" class="headerlink" title="数据存取"></a>数据存取</h2><p>网络存储是一种键值对的存储方式，在数据的存取方面，两种网络存储没有任何差别。下面来看看数据的存储方法：</p>
+<ul>
+<li>.setItem(key, value)</li>
+<li>.getItem(key)</li>
+<li>.removeItem(key)</li>
+<li>.clear()</li>
+<li>.key(index)</li>
+<li>.length<br>由于这套API是基于JavaScript的，因此其使用方法极为容易，甚至可以采取这样的方式进行：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.name = &apos;Remy&apos;;</div></pre></td></tr></table></figure>
+<a id="more"></a>而在调用和删除时，则是这样：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> var a = localStorage.name; // get the data</div><div class="line">delete localStorage.name; // delete data</div><div class="line">//此时如果再试图获取数据，则得到的是未定义</div></pre></td></tr></table></figure>
+<h2 id="相关事件"><a href="#相关事件" class="headerlink" title="相关事件"></a>相关事件</h2><p>HTML5的网络存储不仅仅提供了一套好用的API，同时也新增了一个storage事件，用以让其它对象获知数据存储的进行，如以下的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"> function storageEvent(event) &#123;</div><div class="line">  event = event || window.event; // 兼容IE8方案</div><div class="line">  alert(&apos;Yo people! Something just got stored!&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">if (window.attachEvent) &#123; // 兼容IE8方案</div><div class="line">   window.attachEvent(&apos;onstorage&apos;, storageEvent);</div><div class="line">&#125; else &#123;</div><div class="line">    window.addEventListener(&apos;storage&apos;, storageEvent, false);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意，IE8对该事件的支持并没有其它现代浏览器那么好。</p>
+<p>但是仅仅是弹窗，还不足以让我们了解到存储的实际情况。我们来看看storage事件的属性都有哪些：</p>
+<ul>
+<li>key – 存储键名</li>
+<li>newValue – 新值</li>
+<li>oldValue – 原值</li>
+<li>url – 发生storage事件的地址</li>
+<li>storageArea – localStorage或sessionStorage</li>
+</ul>
+<h2 id="内有恶犬！"><a href="#内有恶犬！" class="headerlink" title="内有恶犬！"></a>内有恶犬！</h2><p>到目前为止，网络存储看起来都这么诱人，但诱人不意味着它就真的一切随你所愿，实际上有一些需要我们注意的地方。</p>
+<p>现有浏览器的存储形式总是字符串。尽管HTML5标准声称网络存储能够存储任何类型的对象，但现有浏览器的实现却几乎都是以字符串的形式来存储的。因此如果你想存储点别的，你得有自己的一套解决方案，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var doctors = [</div><div class="line">  &apos;rem&apos;,</div><div class="line">  &apos;rich_clark&apos;,</div><div class="line">  &apos;brucel&apos;,</div><div class="line">  &apos;jackosborne&apos;,</div><div class="line">  &apos;leads&apos;,</div><div class="line">  &apos;akamike&apos;,</div><div class="line">  &apos;boblet&apos;];</div><div class="line">localStorage.doctors = JSON.stringify(doctors);</div><div class="line"></div><div class="line">// 然后呢</div><div class="line">var html5docs = JSON.parse(localStorage.doctors);</div><div class="line">alert(&apos;There be &apos; + html5docs.length + &apos; doctors in the house&apos;);</div></pre></td></tr></table></figure></p>
+<ul>
+<li>storage事件不会发生在现场窗口。这是一个陷阱。storage事件在存储的时刻触发，但存储进行的那个窗口/标签页并不会获知，相反，其它窗口监听该事件的对象才能够获知。</li>
+<li>storage事件仅在数据变更时才触发。这一点比较容易理解，因为如果存储的数据无论值还是键，都与原先相同，那么实际上存储是没有发生的。</li>
+<li>哦，当然，别忘了看看浏览器的支持情况。IE6和IE7是不支持网络存储的，<del>而且没有什么显而易见的兼容措施</del>这里有一个第三方JavaScript补丁，它试图通过Cookies来缓解这一问题。其它一些早期浏览器支持也有问题，比如Safari 3.2、Opera Mobile 10以及Opera Mini。<!--more--></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;本文的代码均来自&lt;a href=&quot;http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/&quot;&gt;http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/&lt;/a&gt; ，如果您在技术细节上有任何疑问，请以原文为准。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;网络存储分为两种：本地存储（localStorage）和会话存储（sessionStorage）。这两种存储模式的最大区别在于，本地存储是持久性的存储，该存储只有在用户清理浏览器存储或通过代码进行清理时，才会被删除；而会话存储的生命周期仅仅限定在会话期间，一旦用户关闭浏览器或相关标签，数据即刻清除。值得注意的是，会话存储的存储界限通常都只是标签页级别，同一个域的其它标签页网页，无法共享数据。&lt;/p&gt;
+&lt;h2 id=&quot;数据存取&quot;&gt;&lt;a href=&quot;#数据存取&quot; class=&quot;headerlink&quot; title=&quot;数据存取&quot;&gt;&lt;/a&gt;数据存取&lt;/h2&gt;&lt;p&gt;网络存储是一种键值对的存储方式，在数据的存取方面，两种网络存储没有任何差别。下面来看看数据的存储方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;.setItem(key, value)&lt;/li&gt;
+&lt;li&gt;.getItem(key)&lt;/li&gt;
+&lt;li&gt;.removeItem(key)&lt;/li&gt;
+&lt;li&gt;.clear()&lt;/li&gt;
+&lt;li&gt;.key(index)&lt;/li&gt;
+&lt;li&gt;.length&lt;br&gt;由于这套API是基于JavaScript的，因此其使用方法极为容易，甚至可以采取这样的方式进行：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;localStorage.name = &amp;apos;Remy&amp;apos;;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://inceng.github.io/tags/HTML5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5之拖拽下载</title>
+    <link href="http://inceng.github.io/2017/03/18/html-drag/"/>
+    <id>http://inceng.github.io/2017/03/18/html-drag/</id>
+    <published>2017-03-18T06:58:14.000Z</published>
+    <updated>2017-03-18T09:06:58.283Z</updated>
+    
+    <content type="html"><![CDATA[<p>拖拽曾是Windows当中一项非常人性化的操作方式，但在最近几年当中，这种操作方式似乎逐渐变得不再稀奇了。而HTML5对拖拽支持的出现，则让拖拽重新回到了人们的视野当中。</p>
+<a id="more"></a>下面我们看看，如何使用这一特性直接通过拖拽来下载文件。<br><br><em>本文所包含的代码全部来自<a href="http://www.thecssninja.com/javascript/gmail-dragout" target="_blank" rel="external">http://www.thecssninja.com/javascript/gmail-dragout</a> ，如果您对其中的任何技术细节存在疑问，请以原文为准。</em><br><br>#HTML<br><br>HTML的要求非常简单，只要在标签当中引入<code>data-downloadurl</code>和<code>dragable</code>属性即可。<code>data-downloadurl</code>属性的内容分为三部分，第一部分是要下载的文件MIME类型；第二部分是文件的目标名称；第三部分则是文件的URL。<br><br>#JavaScript<br><br>下面我们就可以用JavaScript来监听拖拽事件了。<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var file = document.getElementById(&quot;dragout&quot;);</div><div class="line">file.addEventListener(&quot;dragstart&quot;,function(evt)&#123;</div><div class="line">    evt.dataTransfer.setData(&quot;DownloadURL&quot;,fileDetails);</div><div class="line">&#125;,false);</div><div class="line"></div><div class="line">var fileDetails;</div><div class="line">if(typeof file.dataset === &quot;undefined&quot;) &#123;</div><div class="line">    // Grab it the old way</div><div class="line">    fileDetails = file.getAttribute(&quot;data-downloadurl&quot;);</div><div class="line">&#125; else &#123;</div><div class="line">    fileDetails = file.dataset.downloadurl;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在上面的代码中，我们还检测了dataset的可用性，如果浏览器不支持该特性，则我们直接抓取属性获取数据。<br><!--more--></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;拖拽曾是Windows当中一项非常人性化的操作方式，但在最近几年当中，这种操作方式似乎逐渐变得不再稀奇了。而HTML5对拖拽支持的出现，则让拖拽重新回到了人们的视野当中。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://inceng.github.io/tags/HTML5/"/>
+    
+  </entry>
+  
+</feed>
