@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>用HTML5轻松完成数据存储 | Inceng.github.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+    <meta name="author" content="Inceng">
+  
+  
+    <meta name="description" content="网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。">
+  
+  <meta name="description" content="网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用HTML5轻松完成数据存储">
+<meta property="og:url" content="http://inceng.github.io/2017/03/18/html-storage/index.html">
+<meta property="og:site_name" content="Inceng.github.io">
+<meta property="og:description" content="网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。">
+<meta property="og:updated_time" content="2017-03-18T07:29:37.165Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用HTML5轻松完成数据存储">
+<meta name="twitter:description" content="网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。">
+  
+    <link rel="alternate" href="/atom.xml" title="Inceng.github.io" type="application/atom+xml">
+  
+  
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header id="header">
+  <div class="title">
+    <h1><a href="/">Inceng.github.io</a></h1>
+    <p><a href="/"></a></p>
+  </div>
+  <nav class="nav">
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+      
+        <li><a href="/atom.xml">RSS</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+    <div class="content"><article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/03/18/html-storage/">
+  <time datetime="2017-03-18T07:18:14.000Z">
+    2017-03-18
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title">用HTML5轻松完成数据存储</h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。</p>
+<p><em>本文的代码均来自<a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/，如果您在技术细节上有任何疑问，请以原文为准。" target="_blank" rel="external">http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/，如果您在技术细节上有任何疑问，请以原文为准。</a></em></p>
+<p>网络存储分为两种：本地存储（localStorage）和会话存储（sessionStorage）。这两种存储模式的最大区别在于，本地存储是持久性的存储，该存储只有在用户清理浏览器存储或通过代码进行清理时，才会被删除；而会话存储的生命周期仅仅限定在会话期间，一旦用户关闭浏览器或相关标签，数据即刻清除。值得注意的是，会话存储的存储界限通常都只是标签页级别，同一个域的其它标签页网页，无法共享数据。</p>
+<h2 id="数据存取"><a href="#数据存取" class="headerlink" title="数据存取"></a>数据存取</h2><p>网络存储是一种键值对的存储方式，在数据的存取方面，两种网络存储没有任何差别。下面来看看数据的存储方法：</p>
+<ul>
+<li>.setItem(key, value)</li>
+<li>.getItem(key)</li>
+<li>.removeItem(key)</li>
+<li>.clear()</li>
+<li>.key(index)</li>
+<li>.length<br>由于这套API是基于JavaScript的，因此其使用方法极为容易，甚至可以采取这样的方式进行：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.name = &apos;Remy&apos;;</div></pre></td></tr></table></figure>
+<a id="more"></a>而在调用和删除时，则是这样：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> var a = localStorage.name; // get the data</div><div class="line">delete localStorage.name; // delete data</div><div class="line">//此时如果再试图获取数据，则得到的是未定义</div></pre></td></tr></table></figure>
+<h2 id="相关事件"><a href="#相关事件" class="headerlink" title="相关事件"></a>相关事件</h2><p>HTML5的网络存储不仅仅提供了一套好用的API，同时也新增了一个storage事件，用以让其它对象获知数据存储的进行，如以下的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"> function storageEvent(event) &#123;</div><div class="line">  event = event || window.event; // 兼容IE8方案</div><div class="line">  alert(&apos;Yo people! Something just got stored!&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">if (window.attachEvent) &#123; // 兼容IE8方案</div><div class="line">   window.attachEvent(&apos;onstorage&apos;, storageEvent);</div><div class="line">&#125; else &#123;</div><div class="line">    window.addEventListener(&apos;storage&apos;, storageEvent, false);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>注意，IE8对该事件的支持并没有其它现代浏览器那么好。</p>
+<p>但是仅仅是弹窗，还不足以让我们了解到存储的实际情况。我们来看看storage事件的属性都有哪些：</p>
+<ul>
+<li>key – 存储键名</li>
+<li>newValue – 新值</li>
+<li>oldValue – 原值</li>
+<li>url – 发生storage事件的地址</li>
+<li>storageArea – localStorage或sessionStorage</li>
+</ul>
+<h2 id="内有恶犬！"><a href="#内有恶犬！" class="headerlink" title="内有恶犬！"></a>内有恶犬！</h2><p>到目前为止，网络存储看起来都这么诱人，但诱人不意味着它就真的一切随你所愿，实际上有一些需要我们注意的地方。</p>
+<p>现有浏览器的存储形式总是字符串。尽管HTML5标准声称网络存储能够存储任何类型的对象，但现有浏览器的实现却几乎都是以字符串的形式来存储的。因此如果你想存储点别的，你得有自己的一套解决方案，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var doctors = [</div><div class="line">  &apos;rem&apos;,</div><div class="line">  &apos;rich_clark&apos;,</div><div class="line">  &apos;brucel&apos;,</div><div class="line">  &apos;jackosborne&apos;,</div><div class="line">  &apos;leads&apos;,</div><div class="line">  &apos;akamike&apos;,</div><div class="line">  &apos;boblet&apos;];</div><div class="line">localStorage.doctors = JSON.stringify(doctors);</div><div class="line"></div><div class="line">// 然后呢</div><div class="line">var html5docs = JSON.parse(localStorage.doctors);</div><div class="line">alert(&apos;There be &apos; + html5docs.length + &apos; doctors in the house&apos;);</div></pre></td></tr></table></figure></p>
+<ul>
+<li>storage事件不会发生在现场窗口。这是一个陷阱。storage事件在存储的时刻触发，但存储进行的那个窗口/标签页并不会获知，相反，其它窗口监听该事件的对象才能够获知。</li>
+<li>storage事件仅在数据变更时才触发。这一点比较容易理解，因为如果存储的数据无论值还是键，都与原先相同，那么实际上存储是没有发生的。</li>
+<li>哦，当然，别忘了看看浏览器的支持情况。IE6和IE7是不支持网络存储的，<del>而且没有什么显而易见的兼容措施</del>这里有一个第三方JavaScript补丁，它试图通过Cookies来缓解这一问题。其它一些早期浏览器支持也有问题，比如Safari 3.2、Opera Mobile 10以及Opera Mini。<!--more--></li>
+</ul>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+  <div class="tags">
+    <a class="tags-link" href="/tags/HTML5/">HTML5</a>
+  </div>
+
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+</div>
+  </div>
+  <footer id="footer"><div class="copyright">
+  
+  &copy; 2017 <a href="/">Inceng</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a>
+   | 
+  Redesign by <a href="http://heroicyang.com/" target="_blank">Heroic Yang</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>

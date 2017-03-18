@@ -4,20 +4,23 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   
-  <title>Hexo</title>
+  <title>Inceng.github.io</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Inceng">
   
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+  <meta name="description" content="About Web Development Skills Share">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inceng.github.io">
+<meta property="og:url" content="http://inceng.github.io/index.html">
+<meta property="og:site_name" content="Inceng.github.io">
+<meta property="og:description" content="About Web Development Skills Share">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Inceng.github.io">
+<meta name="twitter:description" content="About Web Development Skills Share">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Inceng.github.io" type="application/atom+xml">
   
   
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -31,7 +34,7 @@
   <div class="wrapper">
     <header id="header">
   <div class="title">
-    <h1><a href="/">Hexo</a></h1>
+    <h1><a href="/">Inceng.github.io</a></h1>
     <p><a href="/"></a></p>
   </div>
   <nav class="nav">
@@ -59,35 +62,30 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2017/03/18/HTML5之拖拽下载/">
-  <time datetime="2017-03-18T06:34:58.209Z">
+      <a href="/2017/03/18/html-cannt/">
+  <time datetime="2017-03-18T08:04:14.000Z">
     2017-03-18
   </time>
 </a>
     
     
   
-    <h1 class="title"><a href="/2017/03/18/HTML5之拖拽下载/"></a></h1>
+    <h1 class="title"><a href="/2017/03/18/html-cannt/">HTML5（目前）无法帮你实现的五件事</a></h1>
   
 
   </header>
   
   <div class="entry">
     
-      <p>拖拽曾是Windows当中一项非常人性化的操作方式，但在最近几年当中，这种操作方式似乎逐渐变得不再稀奇了。而HTML5对拖拽支持的出现，则让拖拽重新回到了人们的视野当中。</p>
-<p>下面我们看看，如何使用这一特性直接通过拖拽来下载文件。</p>
-<p><em>本文所包含的代码全部来自<a href="http://www.thecssninja.com/javascript/gmail-dragout，如果您对其中的任何技术细节存在疑问，请以原文为准。" target="_blank" rel="external">http://www.thecssninja.com/javascript/gmail-dragout，如果您对其中的任何技术细节存在疑问，请以原文为准。</a></em></p>
-<p>#HTML</p>
-<p>HTML的要求非常简单，只要在标签当中引入<code>data-downloadurl</code>和<code>dragable</code>属性即可。<code>data-downloadurl</code>属性的内容分为三部分，第一部分是要下载的文件MIME类型；第二部分是文件的目标名称；第三部分则是文件的URL。</p>
-<p>#JavaScript</p>
-<p>下面我们就可以用JavaScript来监听拖拽事件了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var file = document.getElementById(&quot;dragout&quot;);</div><div class="line">file.addEventListener(&quot;dragstart&quot;,function(evt)&#123;</div><div class="line">    evt.dataTransfer.setData(&quot;DownloadURL&quot;,fileDetails);</div><div class="line">&#125;,false);</div><div class="line"></div><div class="line">var fileDetails;</div><div class="line">if(typeof file.dataset === &quot;undefined&quot;) &#123;</div><div class="line">    // Grab it the old way</div><div class="line">    fileDetails = file.getAttribute(&quot;data-downloadurl&quot;);</div><div class="line">&#125; else &#123;</div><div class="line">    fileDetails = file.dataset.downloadurl;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>在上面的代码中，我们还检测了dataset的可用性，如果浏览器不支持该特性，则我们直接抓取属性获取数据。</p>
-
+      <p>一直以来，很多人都专注于HTML5能够实现什么（或者是如何将各种方法连接起来，实现一个更加优雅的解决方案）。而现在，也不少人想将目光投向那些HTML5无法实现的事情。MSDN上微软员工thebeebs的一篇博文回答了这个问题：</p>
     
   </div>
   <footer class="end-sep">
     
+      
+        <div class="alignleft">
+          <a href="/2017/03/18/html-cannt/#more" class="more-link">阅读全文</a>
+        </div>
       
       
     
@@ -101,15 +99,101 @@
   <header>
     
       <div class="icon"></div>
-      <a href="/2017/03/17/hello-world/">
-  <time datetime="2017-03-17T09:33:20.765Z">
-    2017-03-17
+      <a href="/2017/03/18/html-storage/">
+  <time datetime="2017-03-18T07:18:14.000Z">
+    2017-03-18
   </time>
 </a>
     
     
   
-    <h1 class="title"><a href="/2017/03/17/hello-world/">Hello World</a></h1>
+    <h1 class="title"><a href="/2017/03/18/html-storage/">用HTML5轻松完成数据存储</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>网络存储（Web Storage），是HTML5众多新API中的一类，它要求浏览器提供了一个在用户浏览器上存储数据的方式，而开发者则可以使用JavaScript进行访问和控制。网络存储的存取过程与远端服务器无关，整个过程都发生在用户的浏览器之上。比起Cookies这样极其有限的存储方式，网络存储的空间通常要大很多（IE8的空间为10MB左右）；另外，网络存储的访问方式比起Cookies要简单很多。</p>
+<p><em>本文的代码均来自<a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/，如果您在技术细节上有任何疑问，请以原文为准。">http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/，如果您在技术细节上有任何疑问，请以原文为准。</a></em></p>
+<p>网络存储分为两种：本地存储（localStorage）和会话存储（sessionStorage）。这两种存储模式的最大区别在于，本地存储是持久性的存储，该存储只有在用户清理浏览器存储或通过代码进行清理时，才会被删除；而会话存储的生命周期仅仅限定在会话期间，一旦用户关闭浏览器或相关标签，数据即刻清除。值得注意的是，会话存储的存储界限通常都只是标签页级别，同一个域的其它标签页网页，无法共享数据。</p>
+<h2 id="数据存取"><a href="#数据存取" class="headerlink" title="数据存取"></a>数据存取</h2><p>网络存储是一种键值对的存储方式，在数据的存取方面，两种网络存储没有任何差别。下面来看看数据的存储方法：</p>
+<ul>
+<li>.setItem(key, value)</li>
+<li>.getItem(key)</li>
+<li>.removeItem(key)</li>
+<li>.clear()</li>
+<li>.key(index)</li>
+<li>.length<br>由于这套API是基于JavaScript的，因此其使用方法极为容易，甚至可以采取这样的方式进行：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">localStorage.name = &apos;Remy&apos;;</div></pre></td></tr></table></figure>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2017/03/18/html-storage/#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/03/18/html-drag/">
+  <time datetime="2017-03-18T06:58:14.000Z">
+    2017-03-18
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/03/18/html-drag/">HTML5之拖拽下载</a></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <p>拖拽曾是Windows当中一项非常人性化的操作方式，但在最近几年当中，这种操作方式似乎逐渐变得不再稀奇了。而HTML5对拖拽支持的出现，则让拖拽重新回到了人们的视野当中。</p>
+    
+  </div>
+  <footer class="end-sep">
+    
+      
+        <div class="alignleft">
+          <a href="/2017/03/18/html-drag/#more" class="more-link">阅读全文</a>
+        </div>
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+  
+    <article class="post">
+  <header>
+    
+      <div class="icon"></div>
+      <a href="/2017/03/14/hello-world/">
+  <time datetime="2017-03-14T06:58:14.000Z">
+    2017-03-14
+  </time>
+</a>
+    
+    
+  
+    <h1 class="title"><a href="/2017/03/14/hello-world/">Hello World</a></h1>
   
 
   </header>
@@ -117,14 +201,13 @@
   <div class="entry">
     
       <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
     
   </div>
   <footer class="end-sep">
     
       
         <div class="alignleft">
-          <a href="/2017/03/17/hello-world/#more" class="more-link">Read More</a>
+          <a href="/2017/03/14/hello-world/#more" class="more-link">阅读全文</a>
         </div>
       
       
@@ -146,7 +229,7 @@
   </div>
   <footer id="footer"><div class="copyright">
   
-  &copy; 2017 <a href="/">John Doe</a>
+  &copy; 2017 <a href="/">Inceng</a>
   
 </div>
 <div class="theme-copyright">
