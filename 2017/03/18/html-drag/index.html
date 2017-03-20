@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://inceng.github.io/2017/03/18/html-drag/index.html">
 <meta property="og:site_name" content="寅信 - Inceng">
 <meta property="og:description" content="拖拽曾是Windows当中一项非常人性化的操作方式，但在最近几年当中，这种操作方式似乎逐渐变得不再稀奇了。而HTML5对拖拽支持的出现，则让拖拽重新回到了人们的视野当中。">
-<meta property="og:updated_time" content="2017-03-20T01:07:37.892Z">
+<meta property="og:updated_time" content="2017-03-20T01:17:10.853Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5之拖拽下载">
 <meta name="twitter:description" content="拖拽曾是Windows当中一项非常人性化的操作方式，但在最近几年当中，这种操作方式似乎逐渐变得不再稀奇了。而HTML5对拖拽支持的出现，则让拖拽重新回到了人们的视野当中。">
@@ -75,7 +75,12 @@
   <div class="entry">
     
       <p>拖拽曾是Windows当中一项非常人性化的操作方式，但在最近几年当中，这种操作方式似乎逐渐变得不再稀奇了。而HTML5对拖拽支持的出现，则让拖拽重新回到了人们的视野当中。</p>
-<a id="more"></a>下面我们看看，如何使用这一特性直接通过拖拽来下载文件。<br><br><em>本文所包含的代码全部来自<a href="http://www.thecssninja.com/javascript/gmail-dragout" target="_blank" rel="external">http://www.thecssninja.com/javascript/gmail-dragout</a> ，如果您对其中的任何技术细节存在疑问，请以原文为准。</em><br><br># HTML<br><br>HTML的要求非常简单，只要在标签当中引入<code>data-downloadurl</code>和<code>dragable</code>属性即可。<code>data-downloadurl</code>属性的内容分为三部分，第一部分是要下载的文件MIME类型；第二部分是文件的目标名称；第三部分则是文件的URL。<br><br># JavaScript<br><br>下面我们就可以用JavaScript来监听拖拽事件了。<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var file = document.getElementById(&quot;dragout&quot;);</div><div class="line">file.addEventListener(&quot;dragstart&quot;,function(evt)&#123;</div><div class="line">    evt.dataTransfer.setData(&quot;DownloadURL&quot;,fileDetails);</div><div class="line">&#125;,false);</div><div class="line"></div><div class="line">var fileDetails;</div><div class="line">if(typeof file.dataset === &quot;undefined&quot;) &#123;</div><div class="line">    // Grab it the old way</div><div class="line">    fileDetails = file.getAttribute(&quot;data-downloadurl&quot;);</div><div class="line">&#125; else &#123;</div><div class="line">    fileDetails = file.dataset.downloadurl;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>下面我们看看，如何使用这一特性直接通过拖拽来下载文件。</p>
+<p><em>本文所包含的代码全部来自<a href="http://www.thecssninja.com/javascript/gmail-dragout" target="_blank" rel="external">http://www.thecssninja.com/javascript/gmail-dragout</a> ，如果您对其中的任何技术细节存在疑问，请以原文为准。</em></p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>HTML的要求非常简单，只要在标签当中引入<code>data-downloadurl</code>和<code>dragable</code>属性即可。<code>data-downloadurl</code>属性的内容分为三部分，第一部分是要下载的文件MIME类型；第二部分是文件的目标名称；第三部分则是文件的URL。</p>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>下面我们就可以用JavaScript来监听拖拽事件了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var file = document.getElementById(&quot;dragout&quot;);</div><div class="line">file.addEventListener(&quot;dragstart&quot;,function(evt)&#123;</div><div class="line">    evt.dataTransfer.setData(&quot;DownloadURL&quot;,fileDetails);</div><div class="line">&#125;,false);</div><div class="line"></div><div class="line">var fileDetails;</div><div class="line">if(typeof file.dataset === &quot;undefined&quot;) &#123;</div><div class="line">    // Grab it the old way</div><div class="line">    fileDetails = file.getAttribute(&quot;data-downloadurl&quot;);</div><div class="line">&#125; else &#123;</div><div class="line">    fileDetails = file.dataset.downloadurl;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>在上面的代码中，我们还检测了dataset的可用性，如果浏览器不支持该特性，则我们直接抓取属性获取数据。<br><!--more--></p>
 
     
