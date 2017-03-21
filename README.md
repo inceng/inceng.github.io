@@ -18,10 +18,13 @@ hexo d == hexo deploy #部署到远程Github
 ```
 
 本地搭建hexo发布博客系统要点：
-1.安装nodeJs 和 Git （下载最新版即可）。
-2.本地仓库和Github仓库关联步骤，ssh本地生成然后拷贝id_rsa.pub内容至Github仓库。
-2.npm安装hexo包(有可能会hexo cannot found的报错,配置hexo的环境变量即可)
-3.配置_config.yml中Github仓库地址，安装hexo依赖模块。
+1. 安装nodeJs 和 Git （下载最新版即可）。
+
+2. 本地仓库和Github仓库关联步骤，ssh本地生成然后拷贝id_rsa.pub内容至Github仓库。
+
+3. npm安装hexo包(有可能会hexo cannot found的报错,配置hexo的环境变量即可)
+
+4. 配置_config.yml中Github仓库地址，安装hexo依赖模块。
 ```
 deploy:
   type: git
