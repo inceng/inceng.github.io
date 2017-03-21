@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://inceng.github.io/2017/03/18/html-cannt/index.html">
 <meta property="og:site_name" content="寅信 - Inceng">
 <meta property="og:description" content="一直以来，很多人都专注于HTML5能够实现什么（或者是如何将各种方法连接起来，实现一个更加优雅的解决方案）。而现在，也不少人想将目光投向那些HTML5无法实现的事情。MSDN上微软员工thebeebs的一篇博文回答了这个问题：">
-<meta property="og:updated_time" content="2017-03-20T01:17:02.116Z">
+<meta property="og:updated_time" content="2017-03-21T03:26:12.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5（目前）无法帮你实现的五件事">
 <meta name="twitter:description" content="一直以来，很多人都专注于HTML5能够实现什么（或者是如何将各种方法连接起来，实现一个更加优雅的解决方案）。而现在，也不少人想将目光投向那些HTML5无法实现的事情。MSDN上微软员工thebeebs的一篇博文回答了这个问题：">
@@ -78,11 +78,11 @@
     
       <p>一直以来，很多人都专注于HTML5能够实现什么（或者是如何将各种方法连接起来，实现一个更加优雅的解决方案）。而现在，也不少人想将目光投向那些HTML5无法实现的事情。MSDN上微软员工thebeebs的一篇博文回答了这个问题：</p>
 <a id="more"></a>
-<h5 id="1-HTML5无法实现DRM"><a href="#1-HTML5无法实现DRM" class="headerlink" title="1:HTML5无法实现DRM"></a>1:HTML5无法实现DRM</h5><p>如果你有一家多媒体公司，你需要控制或者限制你的视频内容——通常是在多媒体内容中添加数字版权加密技术（DRM）。不幸的是，HTML5无法加入DRM。HTML5的问题是，它会将多媒体内容的格式完全暴露出来，要解决这个问题并不困难（相关的技术和策略可以在W3C bug system上看到）。我个人认为，这个问题确实有必要解决。抛开各界对DRM的争议，至少对许多公司而言，支持DRM还是非常有意义的——看看Lovefilm的blog ，你就知道目前各个多媒体公司面临的困难了。</p>
-<h5 id="2-HTML5不能播放直播视频"><a href="#2-HTML5不能播放直播视频" class="headerlink" title="2:HTML5不能播放直播视频"></a>2:HTML5不能播放直播视频</h5><p>HTML5已经能够很好地处理静态的视频文件了，但它现在还无法处理直播的视频。尽管HTML5能够提供优质的视频查询和视频点播服务，但是它却无法支持用户观看在线的足球比赛。Apple使用HTTP Live Streaming弥补了HTML5的这一缺失。它通过HTTP传输H.264的文件块，但是这一技术只能在Safari上运行。（顺便提一句，有些人以为HTML5不支持视频的随机播放，但其实HTML5是支持这一功能的。）Streaming Media杂志的网站上能够找到非常丰富的HTML5视频资源。</p>
-<h5 id="3-HTML5上的音频处理也不完美"><a href="#3-HTML5上的音频处理也不完美" class="headerlink" title="3:HTML5上的音频处理也不完美"></a>3:HTML5上的音频处理也不完美</h5><p>你也许会认为：既然HTML5都能够解决视频播放问题了，那音频播放自然不在话下咯。但音频处理最大的问题就是怎样处理延迟的问题。当你的应用程序或是游戏要求音频文件与屏幕上显示的操作保持同步时，这个问题就凸显出来了。其中一个问题就是不同的浏览器处理音频文件的方式可能也有所不同。如果想了解更多相关的信息，可以看看IE博客上的相关介绍，Grant Skinner的SoundJS JavaScript library提供了一种不错的解决方案。</p>
-<h5 id="4-HTML5上不能与摄像头交互"><a href="#4-HTML5上不能与摄像头交互" class="headerlink" title="4:HTML5上不能与摄像头交互"></a>4:HTML5上不能与摄像头交互</h5><p>与Flash有所不同，HTML5不支持用户与摄像头交互（或者是PC机上的麦克风），这使得基于web的会议很难实现。当然也不是完全没有办法，在HTML5Labs上，你可以找到一个Media Capture API的相关标准，它是W3C标准中有关音频处理的部分。HTML5Labs是由最早的Microsoft标准和一些web标准（如W3C）演化而来的。所以它目前还处在发展之中，一旦音频处理问题解决了，就开始着手解决视频问题了。你可以在HTML5Labs网站上找到许多相关的资料。</p>
-<h5 id="5-HTML5上无法实现视频的全屏播放"><a href="#5-HTML5上无法实现视频的全屏播放" class="headerlink" title="5:HTML5上无法实现视频的全屏播放"></a>5:HTML5上无法实现视频的全屏播放</h5><p>使用插件全屏观看视频是没有问题的。但是，如果是使用HTML5，这可能还有点困难（至少是现在）。但针对这一问题，现在已经有一些相关的支持协议了。Chris Pearce在Thundering Herd博客中介绍了他是如何使用HTML全屏API在Firefox上实现视频的全屏播放的。这个API提供了“全屏”的HTML组件。Chrome上也有相关的解决方案。</p>
+<h3 id="1-HTML5无法实现DRM"><a href="#1-HTML5无法实现DRM" class="headerlink" title="1:HTML5无法实现DRM"></a>1:HTML5无法实现DRM</h3><p>如果你有一家多媒体公司，你需要控制或者限制你的视频内容——通常是在多媒体内容中添加数字版权加密技术（DRM）。不幸的是，HTML5无法加入DRM。HTML5的问题是，它会将多媒体内容的格式完全暴露出来，要解决这个问题并不困难（相关的技术和策略可以在W3C bug system上看到）。我个人认为，这个问题确实有必要解决。抛开各界对DRM的争议，至少对许多公司而言，支持DRM还是非常有意义的——看看Lovefilm的blog ，你就知道目前各个多媒体公司面临的困难了。</p>
+<h3 id="2-HTML5不能播放直播视频"><a href="#2-HTML5不能播放直播视频" class="headerlink" title="2:HTML5不能播放直播视频"></a>2:HTML5不能播放直播视频</h3><p>HTML5已经能够很好地处理静态的视频文件了，但它现在还无法处理直播的视频。尽管HTML5能够提供优质的视频查询和视频点播服务，但是它却无法支持用户观看在线的足球比赛。Apple使用HTTP Live Streaming弥补了HTML5的这一缺失。它通过HTTP传输H.264的文件块，但是这一技术只能在Safari上运行。（顺便提一句，有些人以为HTML5不支持视频的随机播放，但其实HTML5是支持这一功能的。）Streaming Media杂志的网站上能够找到非常丰富的HTML5视频资源。</p>
+<h3 id="3-HTML5上的音频处理也不完美"><a href="#3-HTML5上的音频处理也不完美" class="headerlink" title="3:HTML5上的音频处理也不完美"></a>3:HTML5上的音频处理也不完美</h3><p>你也许会认为：既然HTML5都能够解决视频播放问题了，那音频播放自然不在话下咯。但音频处理最大的问题就是怎样处理延迟的问题。当你的应用程序或是游戏要求音频文件与屏幕上显示的操作保持同步时，这个问题就凸显出来了。其中一个问题就是不同的浏览器处理音频文件的方式可能也有所不同。如果想了解更多相关的信息，可以看看IE博客上的相关介绍，Grant Skinner的SoundJS JavaScript library提供了一种不错的解决方案。</p>
+<h3 id="4-HTML5上不能与摄像头交互"><a href="#4-HTML5上不能与摄像头交互" class="headerlink" title="4:HTML5上不能与摄像头交互"></a>4:HTML5上不能与摄像头交互</h3><p>与Flash有所不同，HTML5不支持用户与摄像头交互（或者是PC机上的麦克风），这使得基于web的会议很难实现。当然也不是完全没有办法，在HTML5Labs上，你可以找到一个Media Capture API的相关标准，它是W3C标准中有关音频处理的部分。HTML5Labs是由最早的Microsoft标准和一些web标准（如W3C）演化而来的。所以它目前还处在发展之中，一旦音频处理问题解决了，就开始着手解决视频问题了。你可以在HTML5Labs网站上找到许多相关的资料。</p>
+<h3 id="5-HTML5上无法实现视频的全屏播放"><a href="#5-HTML5上无法实现视频的全屏播放" class="headerlink" title="5:HTML5上无法实现视频的全屏播放"></a>5:HTML5上无法实现视频的全屏播放</h3><p>使用插件全屏观看视频是没有问题的。但是，如果是使用HTML5，这可能还有点困难（至少是现在）。但针对这一问题，现在已经有一些相关的支持协议了。Chris Pearce在Thundering Herd博客中介绍了他是如何使用HTML全屏API在Firefox上实现视频的全屏播放的。这个API提供了“全屏”的HTML组件。Chrome上也有相关的解决方案。</p>
 <p>以上就是HTML5目前无法实现的5件事，但是HTML5不久将解决上述这些问题。<br><!--more--></p>
 
     
