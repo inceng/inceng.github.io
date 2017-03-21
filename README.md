@@ -30,5 +30,7 @@ deploy:
   branch: master
 ```
 ```
-npm install hexo-deployer-git --save
+npm install hexo-deployer-git --save #hexo d依赖
+
+npm install hero-generator-feed  #RSS
 ```
